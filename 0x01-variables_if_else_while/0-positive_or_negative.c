@@ -4,44 +4,58 @@
 
 #include <stdio.h>
 
+
+
 /**
  *
- *  * main - main block
+ *  *main - assign a random number to the variable n each time it is executed
  *
- *   * Description: Get a random number and print the number
+ *   *and prints out based on condition
  *
- *    * and if it is positive, negative, or zero
+ *    *
  *
- *     * Return: 0
+ *     *Return: Always 0 (Success)
  *
  *      */
+
+
 
 int main(void)
 
 {
 
-		int n;
+	        int n;
 
 
 
-			srand(time(0));
+		        srand(time(0));
 
-				n = rand() - RAND_MAX / 2;
+			        n = rand() - RAND_MAX / 2;
 
-					if (n > 0)
+				        if (n > 0)
 
-								printf("%i is positive\n", n);
+						        {
 
-						else if (n < 0)
+								        printf("%d is %s\n", n, "positive");
 
-									printf("%i is negative\n", n);
+									        }
 
-							else
+					        else if (n < 0)
 
-										printf("%i is zero\n", n);
+							        {
 
+									        printf("%d is %s\n", n, "negative");
 
+										        }
 
-								return (0);
+						        else
+
+								        {
+
+										        printf("%d is %s\n", n, "zero");
+
+											        }
+
+							        return (0);
 
 }
