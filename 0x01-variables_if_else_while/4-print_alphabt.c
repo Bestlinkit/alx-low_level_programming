@@ -1,22 +1,22 @@
 #include <stdio.h>
-
 /**
- *main -> assign a random number to the variable n each time it is executed
- *and print the last digit of the number stored in the variable n
- *Return: Always 0 (Success)
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
  */
 int main(void)
 {
-char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
-{
-if (ch != 'q' && ch != 'e')
-{
-putchar(ch);
-}
-}
+	char c = 'a';
 
-putchar(10); /* this is an ascii code for new line*/
+	while (c <= 'z')
+	{
+		if (c != 'e' && c != 'q')
+		{
+			putchar(c);
+		}
+		c++;
+	}
 
-return (0);
+	putchar('\n');
+	return (0);
 }
