@@ -1,24 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - block to be executed
- * Description: 5 below 1024
- * Return: 0
+ * _islower - checks for lower case letter
+ * @c : character to check the case
+ * Return:0 or 1
  */
-int main(void)
+int _islower(int c)
 {
-	int a = 0, b = 1, next = 0;
-	int sum = 0;
+	return (c >= 97 && c <= 122);
 
-	while (next < 4000000)
-	{
-		next = a + b;
-		a = b;
-		b = next;
-
-		if (next % 2 == 0)
-			sum += next;
-	}
-	printf("%i\n", sum);
-	return (0);
 }
